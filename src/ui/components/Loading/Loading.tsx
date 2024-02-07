@@ -29,7 +29,7 @@ const Wrapper = tw.section`
     items-center
     w-full
     h-screen
-    absolute
+    fixed
     top-0
     bg-white1
 `

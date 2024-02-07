@@ -10,19 +10,19 @@ import check from '@icons/check.svg'
 // Imgs
 
 // Services & Utils
-import { server } from "@services/index";
+import { server, sec1Data } from "@services/index";
 import { util } from "@utils/index"
 
 // Components
 
 function Home({ func }: any) {
     //  code logic
-
     const data1 = [
         "Sábado de 8:00 às 17:00",
         "Domingo de 08:00 às 17:00",
         "Segunda e Quarta de 18:30 às 22:30"
     ]
+
 
     const data2 = [
         "Material Didático Digital Grátis",

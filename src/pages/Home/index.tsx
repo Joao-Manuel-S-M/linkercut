@@ -15,6 +15,7 @@ import MHeader from "./MobileSections/Header"
 import MSec1 from "./MobileSections/Sec1"
 import { Loading } from "@components/Loading/Loading";
 import DHeader from "./DesktopSections/Header"
+import DSec1 from "./DesktopSections/Sect1"
 
 // Structure
 function Home() {
@@ -36,6 +37,7 @@ function Home() {
             <Desktop className="lg:flex flex-col">
                 {/* content here */}
                 <DHeader />
+                <DSec1 />
             </Desktop>
         </Wrapper >
     )
