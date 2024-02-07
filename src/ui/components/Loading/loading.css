@@ -1,0 +1,17 @@
+/* CircleOverlay.css */
+.loading {
+    animation: closeLoading 2s forwards;
+    animation-delay: 1s;
+    z-index: 999;
+}
+
+@keyframes closeLoading {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+        display: none;
+    }
+}
