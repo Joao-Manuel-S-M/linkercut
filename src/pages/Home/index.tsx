@@ -44,7 +44,6 @@ const Wrapper = tw.section`
 
 const Mobile = tw.section`
     lg:hidden
-    px-[20px]
 `
 const Desktop = tw.section`
     hidden

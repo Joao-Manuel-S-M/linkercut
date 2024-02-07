@@ -5,11 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'one': ['Bebas Neue',],
+    },
     extend: {
     },
     colors: {
       transparent: 'transparent',
-      black1: '#2B2F39',
+      black1: '#5A5A5A',
       black2: '#62656C',
       black3: '#3e43512e',
       black4: "#373C49",
@@ -19,6 +22,7 @@ export default {
       blue1: '#5B7DF8',
       blue2: '#374269',
       blue3: '#6C9EFF',
+      red1: '#FE3C3C'
     }
   },
   plugins: [],
