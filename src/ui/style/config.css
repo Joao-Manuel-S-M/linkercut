@@ -14,6 +14,9 @@ a {
     text-decoration: none;
 }
 
+body {
+    background-color: #EFEFEF;
+}
 
 /* Remover as setas de aumento e diminuição */
 input[type="number"]::-webkit-inner-spin-button,

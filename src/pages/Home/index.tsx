@@ -12,7 +12,9 @@ import '@animations/animate-pulse.css'
 
 // Sections
 import MHeader from "./MobileSections/Header"
+import MSec1 from "./MobileSections/Sec1"
 import { Loading } from "@components/Loading/Loading";
+import DHeader from "./DesktopSections/Header"
 
 // Structure
 function Home() {
@@ -25,6 +27,7 @@ function Home() {
             <Mobile>
                 {/* content here */}
                 <MHeader prop={{ OpenMenu }} />
+                <MSec1 />
             </Mobile>
             {
                 // mobileMenu && (<Menu prop={{ OpenMenu }} />)
@@ -32,6 +35,7 @@ function Home() {
             {/* Desktop */}
             <Desktop className="lg:flex flex-col">
                 {/* content here */}
+                <DHeader />
             </Desktop>
         </Wrapper >
     )
@@ -39,7 +43,7 @@ function Home() {
 
 // Styles
 const Wrapper = tw.section`
-    bg-black1
+    bg-[#EFEFEF]
 `
 
 const Mobile = tw.section`
