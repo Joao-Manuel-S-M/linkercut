@@ -53,7 +53,6 @@ function Home({ func }: any) {
                         })
                     }
                 </ul>
-
                 <div>
                     <p className="text-[4.2vw] uppercase mb-[0.2vh]">DURAÇÃO DO CURSO: 80 horas</p>
                     <p className="text-[2.8vw] uppercase mb-[0.2vh] font-bold">Obs: Aulas práticas em todos os módulos.</p>
@@ -71,6 +70,11 @@ function Home({ func }: any) {
                     </ul>
                 </div>
             </main>
+            <footer className="py-[5vh]">
+                <p className="text-center text-[4vw]">O SEU FUTURO COMEÇA AQUI!</p>
+                <p className="text-center text-[7vw] font-bold uppercase">Inscrições abertas</p>
+                <p className="text-center text-[3.6vw] uppercase">Começo PREVISTO: 16/03/2024</p>
+            </footer>
         </Wrapper >
     )
 }
