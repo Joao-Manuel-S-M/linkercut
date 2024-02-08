@@ -15,7 +15,7 @@ import { util } from "@utils/index"
 
 // Components
 
-function Home({ func }: any) {
+function Sec1({ func }: any) {
     //  code logic
     const data1 = [
         "Sábado de 8:00 às 17:00",
@@ -84,7 +84,7 @@ const Wrapper = tw.section`
     flex 
     flex-col 
     flex-grow
-    h-screen
+    h-full
 `
 
-export default Home;
+export default Sec1;

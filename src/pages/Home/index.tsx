@@ -13,6 +13,7 @@ import '@animations/animate-pulse.css'
 // Sections
 import MHeader from "./MobileSections/Header"
 import MSec1 from "./MobileSections/Sec1"
+import MSec2 from "./MobileSections/Sec2"
 import { Loading } from "@components/Loading/Loading";
 import DHeader from "./DesktopSections/Header"
 import DSec1 from "./DesktopSections/Sect1"
@@ -29,6 +30,7 @@ function Home() {
                 {/* content here */}
                 <MHeader prop={{ OpenMenu }} />
                 <MSec1 />
+                <MSec2 />
             </Mobile>
             {
                 // mobileMenu && (<Menu prop={{ OpenMenu }} />)
