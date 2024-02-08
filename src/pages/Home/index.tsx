@@ -18,6 +18,7 @@ import MSec3 from "./MobileSections/Sec3"
 import { Loading } from "@components/Loading/Loading";
 import DHeader from "./DesktopSections/Header"
 import DSec1 from "./DesktopSections/Sect1"
+import DFooter from "./DesktopSections/Footer"
 
 // Structure
 function Home() {
@@ -42,6 +43,7 @@ function Home() {
                 {/* content here */}
                 <DHeader />
                 <DSec1 />
+                <DFooter />
             </Desktop>
         </Wrapper >
     )

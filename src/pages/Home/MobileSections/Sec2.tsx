@@ -20,9 +20,9 @@ function Sect2({ func }: any) {
         <Wrapper>
             <div className="bg-red1 py-[5vh]">
                 <header>
-                    <p className="text-white1 text-center text-[4vh] uppercase font-bold">inscreva-se agora!</p>
-                    <p className="text-white1 text-center text-[3.2vh] pb-[1vh] font-bold">Está pensando em realizar o curso?</p>
-                    <p className="text-white1 text-center text-[2.2vh] pb-[4vh] font-bold">Cadastre-se agora logo entraremos em contato</p>
+                    <p className="text-white1 text-center text-[6vw] font-bold uppercase">inscreva-se agora!</p>
+                    <p className="text-white1 text-center text-[2.3vh] pb-[1vh] font-bold">Está pensando em realizar o curso?</p>
+                    <p className="text-white1 text-center text-[1.6vh] pb-[4vh] font-bold">Cadastre-se agora logo entraremos em contato</p>
                 </header>
                 <main className="flex flex-col items-center gap-[2vh]">
                     <input type="text" placeholder="NOME" className="w-[95%] rounded-[5px] py-[2vh] px-[5vw] placeholder:text-[4vw]" />

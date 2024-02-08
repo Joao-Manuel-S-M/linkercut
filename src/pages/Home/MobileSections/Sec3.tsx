@@ -32,29 +32,28 @@ function Sec3({ func }: any) {
                     <p className="text-center text-[3.8vw] font-bold">📍SEU FUTURO COMEÇA AQUI</p>
                 </div>
                 <div>
-                    <p className="text-center font-bold text-[6vw] pb-[8px]">Fale conosco</p>
+                    <p className="text-center font-bold text-[5vw] pb-[8px]">Fale conosco</p>
                     <div className="flex justify-center gap-[2vw]">
                         <img src={zap} alt="" />
-                        <p className="font-bold text-[5vw]">(21) 98881-3888</p>
+                        <p className="font-bold text-[4.2vw]">(21) 98881-3888</p>
                     </div>
                     <div className="flex justify-center gap-[2vw]">
                         <img src={mail} alt="" />
-                        <p className="font-bold text-[5vw]">contato@onfirecursos.com</p>
+                        <p className="font-bold text-[4.2vw]">contato@onfirecursos.com</p>
                     </div>
                 </div>
                 <div className="flex flex-col items-center">
                     <img src={map} alt="" />
-                    <p className="text-center font-bold">116 Av. Campos,  <br />
-                        São João de Meriti, Rio de Janeiro</p>
+                    <p className="text-center font-bold text-[4vw]">Rua Alfredo dos Anjos, 47 <br /> Centro, São João de Meriti - RJ, 25520-060</p>
                 </div>
                 <div className="flex justify-center gap-[2vw]">
                     <img src={insta} alt="insta" className="w-[15vw]" onClick={() => window.location.href = "https://www.instagram.com/onfire.cursos/"} />
                     <img src={face} alt="face" className="w-[15vw]" onClick={() => window.location.href = "https://www.facebook.com/onfirecursosetreinamentos?mibextid=ZbWKwL"} />
                     <img src={mail2} alt="email" className="w-[15vw]" onClick={() => window.location.href = ""} />
                 </div>
-                <footer className="py-[5vh] bg-[#EFEFEF]">
-                    <p className="text-center font-bold">© Copyright 2023 by onfire</p>
-                    <p className="text-center font-bold text-[2.6vh]">Criado por <a href="https://victorpereiira.com/">victorpereiira</a></p>
+                <footer className="py-[2vh] bg-[#EFEFEF]">
+                    <p className="text-center font-bold text-[3vw]">© Copyright 2023 by onfire</p>
+                    <p className="text-center font-bold text-[2.8vw]">Criado por <a href="https://victorpereiira.com/">victorpereiira</a></p>
                 </footer>
             </footer>
         </Wrapper >
