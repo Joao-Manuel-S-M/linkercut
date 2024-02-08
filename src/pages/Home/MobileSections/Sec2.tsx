@@ -32,7 +32,7 @@ function Sect2({ func }: any) {
                     ">Quero receber mais informações</button>
                 </main>
             </div>
-            <div>
+            <div className="pb-[6vh]">
                 <p className="text-center w-[80vw] mx-auto py-[5vh]">🔥 <br />
                     Faça sua matrícula agora mesmo e venha se qualificar com a melhor escola de formação da região.</p>
             </div>
@@ -45,7 +45,7 @@ const Wrapper = tw.section`
     flex 
     flex-col 
     flex-grow
-    h-screen
+    h-full
 `
 
 export default Sect2;
