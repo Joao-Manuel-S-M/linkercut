@@ -1,11 +1,20 @@
 import tw from "tailwind-styled-components"
 import { useState, useEffect } from "react";
 
+
+import axios from "axios"
+axios.defaults.baseURL = 'https://grcqm5z45bbma5vdp7dkmh24ma0qmxdv.lambda-url.us-east-1.on.aws';
+
 // Animation
 
 // Icons
-import vetor1 from '@icons/vetor1.svg'
+import vetor3 from '@icons/vetor1.svg'
 import check from '@icons/check.svg'
+import logo from "@icons/logo.svg"
+import face from '@icons/face.svg'
+import insta from '@icons/insta.svg'
+import mail2 from '@icons/mail2.svg'
+import refresh from '@icons/refresh.svg'
 
 // Imgs
 
@@ -29,10 +38,47 @@ function Home({ func }: any) {
         "Camisa do Curso Grátis"
     ]
 
+    const [loadingModal, setLoadingModal] = useState(false)
+    const [modal, setModal] = useState(false)
+    const [errorModal, setErrorModal] = useState(false)
+
+    const [NoValueModal, setNoValueModal] = useState(false)
+    const [AdcMsg, setAdcMsg] = useState("Por Favor Preencha todos os campos")
+
+    const [InputValue1, setInputValue1] = useState("")
+    const [InputValue2, setInputValue2] = useState("")
+    const [InputValue3, setInputValue3] = useState("")
+
+
+    async function submit() {
+        console.log(InputValue1);
+        if (!InputValue1 || !InputValue2 || !InputValue3) {
+            setNoValueModal(!NoValueModal)
+        } else {
+            setLoadingModal(!loadingModal)
+            await axios.post('/init',
+                {
+                    name: InputValue1,
+                    email: InputValue2,
+                    phone: Number(InputValue3),
+                }, {
+                headers: { 'Content-Type': 'application/json' }
+            })
+                .then(function (response) {
+                    setLoadingModal(false)
+                    setModal(!modal)
+                })
+                .catch(function (error) {
+                    setErrorModal(!errorModal)
+                    // window.location.reload()
+                });
+        }
+    }
+
 
     return (
         <Wrapper>
-            <img src={vetor1} alt="" className="mb-[5vh] w-full" />
+            <img src={vetor3} alt="" className="mb-[5vh]" />
             <main style={{ boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)' }} className="bg-white1 w-[92vw] mx-auto px-[4vw] py-[5vh] flex justify-between rounded-[10px]">
                 <section className="w-[50vw]">
                     <div>
@@ -88,15 +134,77 @@ function Home({ func }: any) {
                             <p className="text-center text-[1.6vw] font-bold">Está pensando em realizar o curso?</p>
                             <p className="text-center pb-[3vh]">Cadastre-se agora logo entraremos em contato</p>
                             <div>
-                                <input type="text" style={{ border: "1px solid #5A5A5A" }} className="w-full rounded-[10px] py-[0.8vh] pl-[10px] mb-[1.2vh]" placeholder="NOME" />
-                                <input type="text" style={{ border: "1px solid #5A5A5A" }} className="w-full rounded-[10px] py-[0.8vh] pl-[10px] mb-[1.2vh]" placeholder="E-MAIL" />
-                                <input type="text" style={{ border: "1px solid #5A5A5A" }} className="w-full rounded-[10px] py-[0.8vh] pl-[10px] mb-[2vh]" placeholder="WHATSAPP" />
+                                <input id="name" onChange={(event: any) => setInputValue1(event.target.value)} type="text" style={{ border: "1px solid #5A5A5A" }} className="w-full rounded-[10px] py-[0.8vh] pl-[10px] mb-[1.2vh]" placeholder="NOME" />
+                                <input id="email" onChange={(event: any) => setInputValue2(event.target.value)} type="text" style={{ border: "1px solid #5A5A5A" }} className="w-full rounded-[10px] py-[0.8vh] pl-[10px] mb-[1.2vh]" placeholder="E-MAIL" />
+                                <input id="phone" onChange={(event: any) => setInputValue3(event.target.value)} type="text" style={{ border: "1px solid #5A5A5A" }} className="w-full rounded-[10px] py-[0.8vh] pl-[10px] mb-[2vh]" placeholder="WHATSAPP" />
                             </div>
-                            <button className="w-full rounded-[10px] bg-red1 text-white1 py-[2vh] text-center">Quero receber mais informações</button>
+                            <button onClick={submit} className="w-full rounded-[10px] bg-red1 text-white1 py-[2vh] text-center">Quero receber mais informações</button>
                         </div>
                     </div>
                 </section>
             </main>
+            {
+                loadingModal && (
+                    <div
+                        className="bg-[#000] h-screen w-full flex justify-center items-center fixed top-0 bg-opacity-70 ">
+                        <div className="flex flex-col items-center justify-center gap-[15px] w-[280px] h-[300px] bg-white1 rounded-[10px] p-[20px]">
+                            <p className="text-center text-[14px]">Processando dados...</p>
+                            <img src={refresh} alt="" className="w-[30px] animate-spin" />
+                        </div>
+                    </div>
+                )
+            }
+            {
+                modal && (
+                    <div onClick={() => {
+                        setModal(!modal)
+                        window.location.reload()
+                    }}
+                        className="bg-[#000] h-screen w-full flex justify-center items-center fixed top-0 bg-opacity-70 ">
+                        <div className="flex flex-col items-center justify-center gap-[15px] w-[280px] h-[300px] bg-white1 rounded-[10px] p-[20px]">
+                            <img src={logo} alt="" className="w-[100px]" />
+                            <p className="text-center text-[14px]">Em breve nossa equipe vai <br /> entrar em  contato com você</p>
+                            <footer className="flex justify-center gap-[15px]">
+                                <img src={insta} alt="insta" className="w-[45px]" onClick={() => window.location.href = "https://www.instagram.com/onfire.cursos/"} />
+                                <img src={face} alt="face" className="w-[45px]" onClick={() => window.location.href = "https://www.facebook.com/onfirecursosetreinamentos?mibextid=ZbWKwL"} />
+                                <img src={mail2} alt="email" className="w-[45px]" onClick={() => window.location.href = "mailto:contato@onfirecursos.com.br"} />
+                            </footer>
+                        </div>
+                    </div>
+                )
+            }
+            {
+                NoValueModal && (
+                    <div onClick={() => setNoValueModal(!NoValueModal)}
+                        className="bg-[#000] h-screen w-full flex justify-center items-center fixed top-0 bg-opacity-70 ">
+                        <div className="flex flex-col items-center justify-center gap-[15px] w-[280px] h-[300px] bg-white1 rounded-[10px] p-[20px]">
+                            <p className="font-bold">Parece que algo deu errado</p>
+                            <p className="text-center text-[14px]">{AdcMsg}</p>
+                            <button className="bg-[#eee] py-[10px] px-[60px] rounded-[20px]">OK</button>
+                        </div>
+                    </div>
+                )
+            }
+            {
+                errorModal && (
+                    <div onClick={() => {
+                        setErrorModal(!errorModal)
+                        setLoadingModal(!loadingModal)
+                        setTimeout(() => window.location.reload(), 300)
+                    }}
+                        className="bg-[#000] h-screen w-full flex justify-center items-center fixed top-0 bg-opacity-70 ">
+                        <div className="flex flex-col items-center justify-center gap-[15px] w-[280px] h-[300px] bg-white1 rounded-[10px] p-[20px]">
+                            <p className="font-bold">Parece que algo deu errado</p>
+                            <p className="text-center text-[14px]">Entre em contato conosco atráves das redes abaixo:</p>
+                            <footer className="flex justify-center gap-[15px]">
+                                <img src={insta} alt="insta" className="w-[45px]" onClick={() => window.location.href = "https://www.instagram.com/onfire.cursos/"} />
+                                <img src={face} alt="face" className="w-[45px]" onClick={() => window.location.href = "https://www.facebook.com/onfirecursosetreinamentos?mibextid=ZbWKwL"} />
+                                <img src={mail2} alt="email" className="w-[45px]" onClick={() => window.location.href = "mailto:contato@onfirecursos.com.br"} />
+                            </footer>
+                        </div>
+                    </div>
+                )
+            }
         </Wrapper >
     )
 }

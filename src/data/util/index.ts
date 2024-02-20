@@ -1,1 +1,1 @@
-export { util } from "./default"
+export { util, goToTop, goTo } from "./default"

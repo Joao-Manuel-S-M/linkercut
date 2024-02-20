@@ -10,7 +10,7 @@ import bgimg_desktop from '@imgs/bgimg_desktop.png'
 
 // Services & Utils
 import { server } from "@services/index";
-import { util } from "@utils/index"
+import { goTo, util } from "@utils/index"
 
 // Components
 
@@ -30,7 +30,7 @@ function Home({ func }: any) {
                 <p className="py-[1vh] px-[2vw] text-black1 bg-white1 rounded-[10vw] text-[1.2vw] uppercase mb-[1.5vh]">Formação</p>
                 <p className="font-one text-white1 text-[9.2vw]  leading-[16vh]">BOMBEIRO</p>
                 <p className="text-white1 text-[3.7vw] leading-[5vh] mb-[3vh]">Profissional Civil</p>
-                <button className="bg-red1 text-white1 py-[1.5vh] px-[3vw] rounded-[0.8vw]">SAIBA MAIS</button>
+                <button className="bg-red1 text-white1 py-[1.5vh] px-[3vw] rounded-[0.8vw]" onClick={() => goTo(window.innerHeight)}>SAIBA MAIS</button>
             </div>
         </Wrapper >
     )

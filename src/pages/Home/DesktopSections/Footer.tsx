@@ -65,7 +65,7 @@ function Footer({ func }: any) {
                     <div className="flex justify-center gap-[2vw] pr-[10vw] items-center">
                         <img src={insta} alt="insta" className="w-[3vw] cursor-pointer" onClick={() => window.location.href = "https://www.instagram.com/onfire.cursos/"} />
                         <img src={face} alt="face" className="w-[3vw] cursor-pointer" onClick={() => window.location.href = "https://www.facebook.com/onfirecursosetreinamentos?mibextid=ZbWKwL"} />
-                        <img src={mail2} alt="email" className="w-[3vw] cursor-pointer" onClick={() => window.location.href = ""} />
+                        <img src={mail2} alt="email" className="w-[3vw] cursor-pointer" onClick={() => window.location.href = "mailto:contato@onfirecursos.com.br"} />
                     </div>
                 </div>
             </section>
