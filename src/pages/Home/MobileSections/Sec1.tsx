@@ -73,7 +73,6 @@ function Sec1({ func }: any) {
             <footer className="py-[5vh]">
                 <p className="text-center text-[4vw]">O SEU FUTURO COMEÇA AQUI!</p>
                 <p className="text-center text-[7vw] font-bold uppercase">Inscrições abertas</p>
-                <p className="text-center text-[3.6vw] uppercase">Começo PREVISTO: 16/03/2024</p>
             </footer>
         </Wrapper >
     )

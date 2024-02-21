@@ -122,7 +122,6 @@ function Home({ func }: any) {
                     <div className="pb-[16vh]">
                         <p className="text-[1.2vw] text-end">O SEU FUTURO COMEÇA AQUI!</p>
                         <p className="text-[2vw] text-end uppercase font-bold">Inscrições abertas</p>
-                        <p className="text-end uppercase">Começo PREVISTO: 16/03/2024</p>
                     </div>
                     <div>
                         <p className="text-center text-[3.2vh] uppercase font-bold pb-[3vh]" >inscreva-se agora!</p>
