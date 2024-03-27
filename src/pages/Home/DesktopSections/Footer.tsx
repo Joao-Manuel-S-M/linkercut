@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 // Icons
 import logo from '@icons/logo.svg'
-import logo2 from '@icons/logo2.svg'
+import logo3 from '@icons/logo3.svg'
 import zap from '@icons/zap.svg'
 import mail from '@icons/mail.svg'
 import map from '@icons/map.svg'
@@ -26,7 +26,7 @@ function Footer({ func }: any) {
 
     return (
         <Wrapper>
-            <img src={logo2} alt="" className="w-[5.2vw] mx-auto mt-[-5vh]" />
+            <img src={logo3} alt="" className="w-[5.2vw] mx-auto mt-[-5vh]" />
             <section className="flex pt-[3vh] pb-[7vh]">
                 <div className="flex w-[50vw] justify-center">
                     <div className="w-[300px]">
@@ -77,7 +77,7 @@ function Footer({ func }: any) {
 const Wrapper = tw.section`  
     flex 
     flex-col 
-    flex-grow
+    flex-grow\\
     h-full
     bg-white1
 `

@@ -23,14 +23,12 @@ function Sec1({ func }: any) {
         "Segunda e Quarta de 18:30 às 22:30"
     ]
 
-
     const data2 = [
         "Material Didático Digital Grátis",
         "Homologação Grátis",
         "Certificado Grátis",
         "Camisa do Curso Grátis"
     ]
-
 
     return (
         <Wrapper>

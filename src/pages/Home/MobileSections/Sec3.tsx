@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 // Animation
 
 // Icons
-import logo2 from '@icons/logo2.svg'
+import logo3 from '@icons/logo3.svg'
 import zap from '@icons/zap.svg'
 import mail from '@icons/mail.svg'
 import map from '@icons/map.svg'
@@ -26,7 +26,7 @@ function Sec3({ func }: any) {
     return (
         <Wrapper>
             <footer className="flex flex-col justify-between flex-grow">
-                <img src={logo2} alt="" className="mx-auto mt-[-30px]" />
+                <img src={logo3} alt="" className="mx-auto mt-[-50px] w-[120px]" />
                 <div>
                     <p className="text-center font-bold">ONFIRE | Cursos & Treinamentos</p>
                     <p className="text-center text-[3.8vw] font-bold">📍SEU FUTURO COMEÇA AQUI</p>
@@ -49,7 +49,7 @@ function Sec3({ func }: any) {
                 <div className="flex justify-center gap-[2vw]">
                     <img src={insta} alt="insta" className="w-[15vw]" onClick={() => window.location.href = "https://www.instagram.com/onfire.cursos/"} />
                     <img src={face} alt="face" className="w-[15vw]" onClick={() => window.location.href = "https://www.facebook.com/onfirecursosetreinamentos?mibextid=ZbWKwL"} />
-                    <img src={mail2} alt="email" className="w-[15vw]" onClick={() => window.location.href = ""} />
+                    <img src={mail2} alt="email" className="w-[15vw]" onClick={() => window.location.href = "mailto:contato@onfirecursos.com.br"} />
                 </div>
                 <footer className="py-[2vh] bg-[#EFEFEF]">
                     <p className="text-center font-bold text-[3vw]">© Copyright 2023 by onfire</p>
