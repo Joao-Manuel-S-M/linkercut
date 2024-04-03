@@ -1,1 +1,0 @@
-export { util, goToTop, goTo } from "./default"

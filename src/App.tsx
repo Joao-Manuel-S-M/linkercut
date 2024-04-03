@@ -1,31 +1,12 @@
-import {
-  BrowserRouter,
-  Route,
-  Routes
-} from 'react-router-dom';
+//pages
+import BuildingPage from "./pages/BuildingPage";
 
-import Home from './pages/Home';
-
-
-type AppProps = {
-  isStart?: boolean
-}
-
-function App(props: AppProps) {
-  return (
-    // <>
-    //   {/* {props.isStart ? <Wellcome /> : true} */}
-    //   <Wellcome />
-    // </>
-
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={< Home />} />
-      </Routes>
-    </BrowserRouter >
-  )
+function App() {
+	return (
+		<>
+			<BuildingPage />
+		</>
+	);
 }
 
 export default App;
-
-
