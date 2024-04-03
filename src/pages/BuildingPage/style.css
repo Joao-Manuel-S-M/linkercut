@@ -1,0 +1,10 @@
+@keyframes pulsing {
+    0% { opacity: 100%; }
+    50% { opacity: 20%; } /* Altere a opacidade para 0 para tornar a animação mais intensa */
+    100% { opacity: 100%; }
+}
+
+.pulsing {
+    animation: pulsing 3.5s infinite;
+    animation-delay: 1.5s;
+}
